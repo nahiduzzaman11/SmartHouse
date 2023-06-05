@@ -20,16 +20,16 @@ class CustomActive extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Expanded(
-      child: Container(
-        decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(8),
-            color: const Color(0xff9A7265)),
-        padding: const EdgeInsets.only(left: 12, right: 12, bottom: 16),
-        child: Stack(
-          children: [
-            InkWell(
-              onTap: onTap,
-              child: Column(
+      child: InkWell(
+        onTap: onTap,
+        child: Container(
+          decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(8),
+              color: const Color(0xff9A7265)),
+          padding: const EdgeInsets.only(left: 12, right: 12, bottom: 16),
+          child: Stack(
+            children: [
+              Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Image.asset(
@@ -41,28 +41,28 @@ class CustomActive extends StatelessWidget {
                   Text(name, style: textWhite),
                 ],
               ),
-            ),
-            Positioned(
-                top: 40,
-                right: 0,
-                child:
-                    Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
-                  Text(
-                    count,
-                    style: cardWhiteText,
-                  ),
-                  Text(
-                    c!,
-                    style: textWhite,
-                  )
-                ])),
-            Positioned(
-                right: 0,
-                bottom: 0,
-                child: Image.asset("assets/images/off.png", height: 24)),
-            Positioned(
-                top: 25, right: 0, child: Text(temp, style: textWhite)),
-          ],
+              Positioned(
+                  top: 40,
+                  right: 0,
+                  child:
+                      Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
+                    Text(
+                      count,
+                      style: cardWhiteText,
+                    ),
+                    Text(
+                      c!,
+                      style: textWhite,
+                    )
+                  ])),
+              Positioned(
+                  right: 0,
+                  bottom: 0,
+                  child: Image.asset("assets/images/off.png", height: 24)),
+              Positioned(
+                  top: 25, right: 0, child: Text(temp, style: textWhite)),
+            ],
+          ),
         ),
       ),
     );
