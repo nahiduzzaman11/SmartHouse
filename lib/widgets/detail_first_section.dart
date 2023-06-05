@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_house/context/strings.dart';
+import 'package:smart_house/widgets/custom_gradient.dart';
 import 'package:smart_house/widgets/custom_image.dart';
 
 class DetailsFirstSection extends StatelessWidget {
@@ -14,6 +15,9 @@ class DetailsFirstSection extends StatelessWidget {
       decoration: decoration,
       child: Stack(
         children: [
+          const Positioned(
+              right: -150,left: 0,top: 105,
+              child: CustomGradient()),
           CustomImage(
             image: "assets/images/lamp1.png",
             height: 200,
@@ -33,7 +37,7 @@ class DetailsFirstSection extends StatelessWidget {
                   ),
                   Text(
                     "Back",
-                    style: textWhite,
+                    style: smallWhiteLite,
                   ),
                 ],
               ),
@@ -45,7 +49,7 @@ class DetailsFirstSection extends StatelessWidget {
                 alignment: Alignment.topCenter,
                 child: Text(
                   "Lamp",
-                  style: titleText,
+                  style: titleWhiteBold,
                 )),
           ),
           Positioned(
@@ -56,7 +60,7 @@ class DetailsFirstSection extends StatelessWidget {
                 children: [
                   Text(
                     "Dining Room",
-                    style: tempColorLite,
+                    style: semiMidWhiteLite,
                   ),
                   Padding(
                     padding: const EdgeInsets.only(top: 10, bottom: 10),
@@ -69,22 +73,22 @@ class DetailsFirstSection extends StatelessWidget {
                   Row(children: [
                     Text(
                       "80",
-                      style: bigTitleText,
+                      style: bigWhiteBold,
                     ),
                     Text(
                       "%",
-                      style: titleText,
+                      style: titleWhiteBold,
                     ),
                   ]),
                   Text(
                     "Brightness",
-                    style: midTextLite,
+                    style: midWhiteLite,
                   ),
                   Padding(
                     padding: const EdgeInsets.symmetric(vertical: 5),
                     child: Text(
                       "Insensity",
-                      style: tempColor,
+                      style: semiMidWhiteBold,
                     ),
                   ),
                 ],
@@ -106,13 +110,13 @@ class DetailsFirstSection extends StatelessWidget {
               crossAxisAlignment: CrossAxisAlignment.start,
               children: [
                 Divider(
-                  color: cardColor,
+                  color: semiWhite,
                 ),
                 Padding(
                   padding: const EdgeInsets.only(bottom: 10, top: 15),
                   child: Text(
                     "Usages",
-                    style: tempColor,
+                    style: semiMidWhiteBold,
                   ),
                 ),
                 Row(
@@ -120,17 +124,17 @@ class DetailsFirstSection extends StatelessWidget {
                   children: [
                     Text(
                       "Use Today",
-                      style: textWhite,
+                      style: smallWhiteLite,
                     ),
                     Row(
                       children: [
                         Text(
                           "50 ",
-                          style: midTextLBold,
+                          style: midWhiteBold,
                         ),
                         Text(
                           "watt",
-                          style: midTextLite,
+                          style: midWhiteLite,
                         ),
                       ],
                     ),
@@ -141,17 +145,17 @@ class DetailsFirstSection extends StatelessWidget {
                   children: [
                     Text(
                       "Use Week",
-                      style: textWhite,
+                      style: smallWhiteLite,
                     ),
                     Row(
                       children: [
                         Text(
                           "500 ",
-                          style: midTextLBold,
+                          style: midWhiteBold,
                         ),
                         Text(
                           "kwh",
-                          style: midTextLite,
+                          style: midWhiteLite,
                         ),
                       ],
                     ),
@@ -162,17 +166,17 @@ class DetailsFirstSection extends StatelessWidget {
                   children: [
                     Text(
                       "Use Month",
-                      style: textWhite,
+                      style: smallWhiteLite,
                     ),
                     Row(
                       children: [
                         Text(
                           "5000 ",
-                          style: midTextLBold,
+                          style: midWhiteBold,
                         ),
                         Text(
                           "kwh",
-                          style: midTextLite,
+                          style: midWhiteLite,
                         ),
                       ],
                     ),

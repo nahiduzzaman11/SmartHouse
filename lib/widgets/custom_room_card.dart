@@ -22,7 +22,7 @@ class CustomRoom extends StatelessWidget {
         height: 190,
         padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 16),
         decoration: BoxDecoration(
-          color: cardColor,
+          color: semiWhite,
           borderRadius: BorderRadius.circular(16),
         ),
         child: Stack(
@@ -34,13 +34,13 @@ class CustomRoom extends StatelessWidget {
                 padding:
                     const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                 decoration: BoxDecoration(
-                    color: backGroundColor,
+                    color: backTill,
                     borderRadius: BorderRadius.circular(6)),
                 child: Row(
                   mainAxisAlignment: MainAxisAlignment.center,
                   children: [
-                    Text(temp,style: tempColor),
-                    Text("c",style: textWhite),
+                    Text(temp,style: semiMidWhiteBold),
+                    Text("c",style: smallWhiteLite),
                   ],
                 ),
               ),
@@ -50,7 +50,7 @@ class CustomRoom extends StatelessWidget {
               bottom: 20,right: 0,left: 0,
               child: Padding(
                 padding: const EdgeInsets.all(5.0),
-                child: Center(child: Text(title, style: cardTextStyle1)),
+                child: Center(child: Text(title, style: largeDarkBold)),
               ),
             ),
             Positioned(
@@ -66,12 +66,12 @@ class CustomRoom extends StatelessWidget {
                         borderRadius: BorderRadius.circular(4)),
                     child: Text(
                       count,
-                      style: cardTextStyle1,
+                      style: largeDarkBold,
                     ),
                   ),
                   Text(
                     text,
-                    style: cardTextStyle,
+                    style: smallDarkLight,
                   ),
                 ],
               ),
