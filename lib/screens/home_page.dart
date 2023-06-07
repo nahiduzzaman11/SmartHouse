@@ -2,8 +2,8 @@ import 'package:flutter/material.dart';
 import 'package:smart_house/context/strings.dart';
 import 'package:smart_house/screens/detail_item.dart';
 import 'package:smart_house/widgets/custom_active_card.dart';
+import 'package:smart_house/widgets/custom_button.dart';
 import 'package:smart_house/widgets/custom_details.dart';
-import 'package:smart_house/widgets/custom_nev.dart';
 import 'package:smart_house/widgets/custom_room_card.dart';
 import 'package:smart_house/widgets/home_first_section.dart';
 
@@ -24,11 +24,7 @@ class HomePage extends StatelessWidget {
               child: Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
-                  decoration: const BoxDecoration(
-                      borderRadius: BorderRadius.only(
-                        topRight: Radius.circular(56),
-                      ),
-                      color: Colors.white),
+                  decoration: decoration1,
                   child: Column(children: [
                     Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
@@ -88,9 +84,16 @@ class HomePage extends StatelessWidget {
                           },
                         ),
                       ],
+                    ),
+                    const SizedBox(height: 12),
+                    Row(
+                      children: [
+                        Custom_Button(text: "Turn Off All Devices", backgroundColor: grayColor, foregroundColor: Colors.white, onTap: (){
+                        }),
+                      ],
                     )
                   ]))),
         ])),
-        bottomNavigationBar: const CustomNev());
+    );
   }
 }

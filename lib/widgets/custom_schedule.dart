@@ -35,7 +35,7 @@ class CustomSchedule extends StatelessWidget {
                       CrossAxisAlignment.start,
                       children: [
                         Text(myList[index].title,
-                            style: titleColor),
+                            style: titleColorDark),
                         Row(children: [
                           Text(myList[index].name,
                               style: cardTextStyle),
@@ -68,7 +68,7 @@ class CustomSchedule extends StatelessWidget {
                             children: [
                               Text("from",
                                   style: cardTextStyle),
-                              Text("8 pm", style: titleColor)
+                              Text("8 pm", style: titleColorDark)
                             ])
                       ])),
 
@@ -104,7 +104,7 @@ class CustomSchedule extends StatelessWidget {
                                 CrossAxisAlignment.end,
                                 children: [
                                   Text("to", style: cardTextStyle),
-                                  Text("8 am",style: titleColor)]
+                                  Text("8 am",style: titleColorDark)]
                             ),
                             const SizedBox(width: 33,),
                             Column(

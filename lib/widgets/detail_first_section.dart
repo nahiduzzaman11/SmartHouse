@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:smart_house/context/strings.dart';
+import 'package:smart_house/widgets/custom_gradient.dart';
 import 'package:smart_house/widgets/custom_image.dart';
 
 class DetailsFirstSection extends StatelessWidget {
@@ -14,6 +15,9 @@ class DetailsFirstSection extends StatelessWidget {
       decoration: decoration,
       child: Stack(
         children: [
+          const Positioned(
+              right: -150,left: 0,top: 105,
+              child: CustomGradient()),
           CustomImage(
             image: "assets/images/lamp1.png",
             height: 200,
@@ -126,7 +130,7 @@ class DetailsFirstSection extends StatelessWidget {
                       children: [
                         Text(
                           "50 ",
-                          style: midTextLBold,
+                          style: midWhiteTextBold,
                         ),
                         Text(
                           "watt",
@@ -147,7 +151,7 @@ class DetailsFirstSection extends StatelessWidget {
                       children: [
                         Text(
                           "500 ",
-                          style: midTextLBold,
+                          style: midWhiteTextBold,
                         ),
                         Text(
                           "kwh",
@@ -168,7 +172,7 @@ class DetailsFirstSection extends StatelessWidget {
                       children: [
                         Text(
                           "5000 ",
-                          style: midTextLBold,
+                          style: midWhiteTextBold,
                         ),
                         Text(
                           "kwh",
