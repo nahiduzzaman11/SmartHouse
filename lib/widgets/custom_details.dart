@@ -12,17 +12,17 @@ class CustomDetails extends StatelessWidget {
   Widget build(BuildContext context) {
     return Row(
       children: [
-        Text(title, style: cardTextStyle1),
+        Text(title, style: largeDarkBold),
         Container(
           margin: const EdgeInsets.only(left: 2),
           padding: const EdgeInsets.symmetric(
               horizontal: 6, vertical: 4),
           decoration: BoxDecoration(
-              color: backGroundColor,
+              color: backTill,
               borderRadius: BorderRadius.circular(4)),
           child: Text(
             count,
-            style: tempColor,
+            style: semiMidWhiteBold,
           ),
         ),
       ],

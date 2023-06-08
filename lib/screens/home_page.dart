@@ -20,7 +20,7 @@ class HomePage extends StatelessWidget {
               const HomeFirstSection(),
           //Second Section....
           Container(
-              color: backGroundColor,
+              color: backTill,
               child: Container(
                   padding:
                       const EdgeInsets.symmetric(vertical: 20, horizontal: 30),
@@ -29,8 +29,8 @@ class HomePage extends StatelessWidget {
                     Row(
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
-                          Text("Rooms", style: cardTextStyle1),
-                          Text("See All", style: seeAll)
+                          Text("Rooms", style: largeDarkBold),
+                          Text("See All", style: midTillBold)
                         ]),
                     const SizedBox(height: 8),
                     Row(children: [
@@ -55,7 +55,7 @@ class HomePage extends StatelessWidget {
                         mainAxisAlignment: MainAxisAlignment.spaceBetween,
                         children: [
                           CustomDetails(count: " 6 ", title: "Active "),
-                          Text("See All", style: seeAll)
+                          Text("See All", style: midTillBold)
                         ]),
                     const SizedBox(height: 8),
                     Row(

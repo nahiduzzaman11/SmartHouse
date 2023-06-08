@@ -1,17 +1,18 @@
 import 'package:flutter/material.dart';
 import 'package:smart_house/context/strings.dart';
-import 'package:smart_house/model/my_model.dart';
 import 'package:smart_house/widgets/custom_image.dart';
 
-class CustomSchedule extends StatelessWidget {
-  const CustomSchedule({super.key});
+class CustomItemCard extends StatelessWidget {
+   const CustomItemCard({super.key,required this.list});
+
+  final List list;
 
   @override
   Widget build(BuildContext context) {
     return ListView.builder(
       physics: const NeverScrollableScrollPhysics(),
       shrinkWrap: true,
-      itemCount: myList.length,
+      itemCount: list.length,
       itemBuilder: (context, index) {
         return SizedBox(
           height: 112,
@@ -24,7 +25,7 @@ class CustomSchedule extends StatelessWidget {
                 BorderRadius.all(Radius.circular(16))),
             child: Padding(
               padding: const EdgeInsets.only(
-                  left: 20, right: 20, top: 10, bottom: 0),
+                  left: 20, right: 20, top: 10, bottom: 8),
               child: Stack(
                 children: [
                   //Start Lamp Text ....
@@ -34,22 +35,10 @@ class CustomSchedule extends StatelessWidget {
                       crossAxisAlignment:
                       CrossAxisAlignment.start,
                       children: [
-                        Text(myList[index].title,
-                            style: titleColorDark),
-                        Row(children: [
-                          Text(myList[index].name,
-                              style: cardTextStyle),
-                          Padding(
-                              padding:
-                              const EdgeInsets.symmetric(
-                                  horizontal: 10),
-                              child: Text("|",
-                                  style: TextStyle(
-                                      color: darkColor,
-                                      fontSize: 12))),
-                          Text(myList[index].date,
-                              style: cardTextStyle)
-                        ]),
+                        Text(list[index].title,
+                            style: semiMidDarkBold),
+                        Text(list[index].details,
+                            style: smallDarkLight),
                       ],
                     ),
                   ),
@@ -57,9 +46,9 @@ class CustomSchedule extends StatelessWidget {
                   //Lite and time section...
                   Positioned(
                       left: 0,
-                      bottom: 10,
+                      bottom: 4,
                       child: Row(children: [
-                        Image.asset("assets/images/lamp2.png",
+                        Image.asset(list[index].image2,
                             height: 40, width: 40),
                         const SizedBox(width: 16),
                         Column(
@@ -67,14 +56,14 @@ class CustomSchedule extends StatelessWidget {
                             CrossAxisAlignment.start,
                             children: [
                               Text("from",
-                                  style: cardTextStyle),
-                              Text("8 pm", style: titleColorDark)
+                                  style: smallDarkLight),
+                              Text(list[index].start, style: semiMidDarkBold)
                             ])
                       ])),
 
                   //On Image button...
                   CustomImage(
-                    image: "assets/images/on.png",
+                    image: list[index].image1,
                     height: 24,
                     width: 55,
                     right: 0,
@@ -84,7 +73,7 @@ class CustomSchedule extends StatelessWidget {
                   //Center Divider...
                   Positioned(
                       top: 0,
-                      bottom: 8,
+                      bottom: 0,
                       left: 0,
                       right: 0,
                       child: VerticalDivider(
@@ -95,7 +84,7 @@ class CustomSchedule extends StatelessWidget {
 
                   //Fight text and delete edit button
                   Positioned(
-                      bottom: 10,
+                      bottom: 4,
                       right: 0,
                       child: Row(
                           children: [
@@ -103,8 +92,8 @@ class CustomSchedule extends StatelessWidget {
                                 crossAxisAlignment:
                                 CrossAxisAlignment.end,
                                 children: [
-                                  Text("to", style: cardTextStyle),
-                                  Text("8 am",style: titleColorDark)]
+                                  Text("to", style: smallDarkLight),
+                                  Text(list[index].end,style: semiMidDarkBold)]
                             ),
                             const SizedBox(width: 33,),
                             Column(

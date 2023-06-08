@@ -36,11 +36,12 @@ class _PagesState extends State<Pages> {
       ),
 
       bottomNavigationBar: Container(
-          height: 88,padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
+          height: 88,
+        padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 16),
           decoration: BoxDecoration(
               borderRadius: const BorderRadius.only(
                   topLeft: Radius.circular(16), topRight: Radius.circular(16)),
-              color: backGroundColor),
+              color: backTill),
           child: GNav(
             haptic: true, // haptic feedback
             tabBorderRadius: 8,
@@ -48,24 +49,24 @@ class _PagesState extends State<Pages> {
             curve: Curves.easeOutExpo, // tab animation curves
             duration: const Duration(milliseconds: 100), // tab animation duration
             gap: 2, // the tab button gap between icon and text
-            color: backGroundColor, // unselected icon color
-            activeColor: backGroundColor, // selected icon and text color
+            color: backTill, // unselected icon color
+            activeColor: backTill, // selected icon and text color
             iconSize: 24, // tab button icon size// selected tab background color
             padding: const EdgeInsets.symmetric(horizontal: 22, vertical: 16), // navigation bar padding
             tabs: [
-              GButton(textStyle: textBackColorBold,
+              GButton(textStyle: semiMidTillBold,
                 icon: Icons.home_rounded,
                 text: 'Home',
               ),
-              GButton(textStyle: textBackColorBold,
+              GButton(textStyle: semiMidTillBold,
                 icon: Icons.show_chart,
                 text: 'Smart',
               ),
-              GButton(textStyle: textBackColorBold,
+              GButton(textStyle: semiMidTillBold,
                 icon: Icons.pie_chart_rounded,
                 text: 'Usage',
               ),
-              GButton(textStyle: textBackColorBold,
+              GButton(textStyle: semiMidTillBold,
                 icon: Icons.person_outline_rounded,
                 text: 'Profile',
               )

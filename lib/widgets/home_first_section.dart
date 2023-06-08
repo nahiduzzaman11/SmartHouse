@@ -32,7 +32,7 @@ class HomeFirstSection extends StatelessWidget {
           Positioned(
               left: 30,
               top: 50,
-              child: Text("Good Morning,", style: titleText)),
+              child: Text("Good Morning,", style: titleWhiteBold)),
           Positioned(
               left: 30,
               top: 75,
@@ -60,7 +60,7 @@ class HomeFirstSection extends StatelessWidget {
                       const EdgeInsets.symmetric(horizontal: 15, vertical: 15),
                   height: 175,
                   decoration: BoxDecoration(
-                      color: cardColor,
+                      color: semiWhite,
                       borderRadius: BorderRadius.circular(28)),
                   child: Column(
                       mainAxisAlignment: MainAxisAlignment.center,
@@ -81,10 +81,10 @@ class HomeFirstSection extends StatelessWidget {
                                           MainAxisAlignment.spaceEvenly,
                                       children: [
                                         Text("May 16,2023 10:05 am",
-                                            style: cardTextStyle),
-                                        Text("Cloudy", style: cardTextStyle1),
+                                            style: smallDarkLight),
+                                        Text("Cloudy", style: largeDarkBold),
                                         Text("Jakarta, Indonesia",
-                                            style: cardTextStyle),
+                                            style: smallDarkLight),
                                       ])),
                               Row(children: [
                                 Text("19°",
@@ -98,7 +98,7 @@ class HomeFirstSection extends StatelessWidget {
                               ])
                             ]),
                         Divider(
-                          color: backGroundColor,
+                          color: backTill,
                         ),
                         //three card
                         Row(

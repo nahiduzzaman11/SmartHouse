@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:smart_house/context/strings.dart';
 import 'package:smart_house/model/my_model.dart';
+import 'package:smart_house/widgets/custom_chart.dart';
 import 'package:smart_house/widgets/custom_details.dart';
 
 class Usage extends StatelessWidget {
@@ -26,7 +27,7 @@ class Usage extends StatelessWidget {
                     children: [
                       Text(
                         "Power Usage",
-                        style: titleText,
+                        style: titleWhiteBold,
                       ),
                       Image.asset(
                         "assets/images/settings.png",
@@ -35,38 +36,36 @@ class Usage extends StatelessWidget {
                       ),
                     ],
                   ),
-                  const SizedBox(
-                    height: 24,
-                  ),
+                  const SizedBox(height: 24,),
                   Row(
                     mainAxisAlignment: MainAxisAlignment.spaceBetween,
                     children: [
                       Text(
                         "Usage this Week",
-                        style: titleColorWhite,
+                        style: semiMidSemiWhiteBold,
                       ),
                       Row(
                         children: [
                           Text(
                             "2500 ",
-                            style: midText,
+                            style: midSemiWhiteBold,
                           ),
                           Text(
                             "watt",
-                            style: text,
+                            style: smallSemiWhiteLite,
                           ),
                         ],
                       ),
                     ],
-                  )
+                  ),
+                  const CustomChart()
                 ],
               ),
             ),
             Container(
-              color: backGroundColor,
+              color: backTill,
               child: Container(
-                padding:
-                    const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
+                padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 20),
                 decoration: decoration1,
                 child: Column(
                   children: [
@@ -74,7 +73,7 @@ class Usage extends StatelessWidget {
                       mainAxisAlignment: MainAxisAlignment.spaceBetween,
                       children: [
                         CustomDetails(count: " ${powerList.length} ", title: "Total Today "),
-                        Text("See All   ", style: seeAll),
+                        Text("See All   ", style: midTillBold),
                       ],
                     ),
                     ListView.builder(
@@ -85,7 +84,7 @@ class Usage extends StatelessWidget {
                       itemBuilder: (context, index) {
                         return Card(
                           elevation: 1,
-                          color: cardColor,
+                          color: semiWhite,
                           shape: const RoundedRectangleBorder(
                               borderRadius:
                                   BorderRadius.all(Radius.circular(16))),
@@ -102,16 +101,16 @@ class Usage extends StatelessWidget {
                                     const SizedBox(width: 16),
                                     Column(crossAxisAlignment: CrossAxisAlignment.start,
                                       children: [
-                                        Text(powerList[index].title,style: titleColorDark,),
-                                        Text(powerList[index].details,style: cardTextStyle,),
+                                        Text(powerList[index].title,style: semiMidDarkBold,),
+                                        Text(powerList[index].details,style: smallDarkLight,),
                                         Row(
                                           children: [
-                                            Text(powerList[index].unit1,style: textLightDark,),
+                                            Text(powerList[index].unit1,style: smallLightDark,),
                                             Padding(
                                               padding: const EdgeInsets.symmetric(horizontal: 4),
-                                              child: Text("|",style: textLightDark,),
+                                              child: Text("|",style: smallLightDark,),
                                             ),
-                                            Text(powerList[index].unit2,style: textLightDark,),
+                                            Text(powerList[index].unit2,style: smallLightDark,),
                                           ],
                                         ),
                                       ],
@@ -125,8 +124,8 @@ class Usage extends StatelessWidget {
                                   children: [
                                     Row(
                                       children: [
-                                        Text(powerList[index].count.toString(),style: textBackColorBold,),
-                                        Text(powerList[index].percent,style: textBackColorLite,),
+                                        Text(powerList[index].count.toString(),style: semiMidTillBold,),
+                                        Text(powerList[index].percent,style: semiMidTillLite,),
                                       ],
                                     ),
                                     Row(
@@ -135,7 +134,7 @@ class Usage extends StatelessWidget {
                                         Padding(
                                           padding: const EdgeInsets.only(left: 2),
                                           child: Text
-                                            ("${powerList[index].number}%",style: textLightGreen),
+                                            ("${powerList[index].number}%",style: smallLightGreen),
                                         ),
                                       ],
                                     )

@@ -37,8 +37,8 @@ class CustomActive extends StatelessWidget {
                     height: 75,
                   ),
                   const SizedBox(height: 16,),
-                  Text(title, style: cardWhiteText),
-                  Text(name, style: textWhite),
+                  Text(title, style: largeWhiteBold),
+                  Text(name, style: smallWhiteLite),
                 ],
               ),
               Positioned(
@@ -48,11 +48,11 @@ class CustomActive extends StatelessWidget {
                       Row(crossAxisAlignment: CrossAxisAlignment.end, children: [
                     Text(
                       count,
-                      style: cardWhiteText,
+                      style: largeWhiteBold,
                     ),
                     Text(
                       c!,
-                      style: textWhite,
+                      style: smallWhiteLite,
                     )
                   ])),
               Positioned(
@@ -60,7 +60,7 @@ class CustomActive extends StatelessWidget {
                   bottom: 0,
                   child: Image.asset("assets/images/off.png", height: 24)),
               Positioned(
-                  top: 25, right: 0, child: Text(temp, style: textWhite)),
+                  top: 25, right: 0, child: Text(temp, style: smallWhiteLite)),
             ],
           ),
         ),
